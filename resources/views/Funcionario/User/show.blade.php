@@ -1,22 +1,22 @@
-<!doctype html>
-<html>
-    <head>
-        <title>title</title>
-    </head>
-    <body>
-        @if($user->tipo == 'funcionario')
-        <h2>Funcionário</h2>
-        @else
-        <h2>Tutor</h2>
-        @endif
-        {{$user->nome}}<br>
-        {{$user->email}}<br>
-        {{$user->endereco}}<br>
-        {{$user->telefone}}<br>
-        {{$user->datanascimento}}<br>
-        @if($user->tipo == 'funcionario')
-        {{$user->funcao}}<br>
-        {{$user->dataingresso}}<br>
-        @endif
-    </body>
-</html>
+@extends('../layouts.app')
+
+@section('content')
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">@if($user->tipo == 'funcionario') Funcionário @else Tutor @endif</div>
+            <div class="card-body">
+                {{$user->nome}}<br>
+                {{$user->email}}<br>
+                {{$user->endereco}}<br>
+                {{$user->telefone}}<br>
+                {{$user->datanascimento}}<br>
+                @if($user->tipo == 'funcionario')
+                {{$user->funcao}}<br>
+                {{$user->dataingresso}}<br>
+                @endif
+            </div>
+        </div>
+    </div>
+</div>
+@endsection

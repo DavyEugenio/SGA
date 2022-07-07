@@ -18,7 +18,7 @@ use App\Http\Controllers\Auth\LoginController;
  */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 })->name('/');
 
 Auth::routes();
@@ -27,7 +27,6 @@ Route::controller(UserController::class)->group(function () {
     Route::get('/logged', 'index')->name('logged.index');
     
     Route::get('/Tutor', 'index')->name('tutor.index');
-    Route::get('/Tutor/dados', 'showLogged')->name('tutor.show');
     Route::post('/Tutor/criar', 'storeTutor')->name('tutor.store');
     Route::get('/Tutor/remover', 'removeLogged')->name('tutor.remove');
     Route::get('/Tutor/atualizar', 'editLogged')->name('tutor.edit');

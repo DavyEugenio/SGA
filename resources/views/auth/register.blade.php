@@ -1,33 +1,38 @@
-<!doctype html>
-<html>
-    <head>
-        <title>title</title>
-    </head>
-    <body>
-        <form method="POST" action="{{route('tutor.store')}}">
-            @csrf
-            <label for="nome">Nome:</label>
-            <input type="text" name="nome" id="nome" >
-            <br>
-            <label for="cpf">CPF:</label>
-            <input type="text" name="cpf" id="cpf">
-            <br>
-            <label for="email">E-mail:</label>
-            <input type="text" name="email" id="email">
-            <br>
-            <label for="endereco">Endereço:</label>
-            <input type="text" name="endereco" id="endereco">
-            <br>
-            <label for="telefone">Telefone:</label>
-            <input type="text" name="telefone" id="telefone">
-            <br>
-            <label for="datanascimento">Data de Nascimento:</label>
-            <input type="date" name="datanascimento" id="datanascimento">
-            <br>
-            <label for="password">Senha:</label>
-            <input type="password" name="password" id="password">
-            <br>
-            <input type="submit" value="Enviar">
-        </form>
-    </body>
-</html>
+@extends('layouts.app')
+
+@section('content')
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">Cadastro</div>
+            <div class="card-body">
+                <form method="POST" action="{{route('tutor.store')}}">
+                    @csrf
+                    <label class="col-md-4 col-form-label text-md-right" for="nome">Nome:</label>
+                    <input type="text"  name="nome" id="nome" required>
+                    <br>
+                    <label class="col-md-4 col-form-label text-md-right" for="cpf">CPF:</label>
+                    <input class="form-control" type="text"  name="cpf" id="cpf" required>
+                    <br>
+                    <label class="col-md-4 col-form-label text-md-right" for="email">E-mail:</label>
+                    <input class="form-control" type="text"  name="email" id="email" required>
+                    <br>
+                    <label class="col-md-4 col-form-label text-md-right" for="endereco">Endereço:</label>
+                    <input class="form-control" type="text"  name="endereco" id="endereco" required>
+                    <br>
+                    <label class="col-md-4 col-form-label text-md-right" for="telefone">Telefone:</label>
+                    <input class="form-control" type="text"  name="telefone" id="telefone" required>
+                    <br>
+                    <label class="col-md-4 col-form-label text-md-right" for="datanascimento">Data de Nascimento:</label>
+                    <input class="form-control" type="date"  name="datanascimento" id="datanascimento" required>
+                    <br>
+                    <label class="col-md-4 col-form-label text-md-right" for="password">Senha:</label>
+                    <input class="form-control" type="password"  name="password" id="password" required>
+                    <br>
+                    <input class="btn btn-primary" type="submit" value="Enviar">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection

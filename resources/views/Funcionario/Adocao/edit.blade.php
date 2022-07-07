@@ -1,9 +1,6 @@
-<!doctype html>
-<html>
-    <head>
-        <title>title</title>
-    </head>
-    <body>
+@extends('../layouts.app')
+
+@section('content')
         <h2>Tutor</h2>
         {{$user->nome}}<br>
         {{$user->email}}<br>
@@ -31,5 +28,4 @@
             </select>
             <input type="submit" value="Enviar">
         </form>
-    </body>
-</html>
+@endsection

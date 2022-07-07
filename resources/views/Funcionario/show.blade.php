@@ -1,9 +1,6 @@
-<!doctype html>
-<html>
-    <head>
-        <title>title</title>
-    </head>
-    <body>
+@extends('layouts.app')
+
+@section('content')
         <h2>Funcionário</h2>
         {{$user->nome}}<br>
         {{$user->email}}<br>
@@ -12,5 +9,4 @@
         {{$user->datanascimento}}<br>
         {{$user->funcao}}<br>
         {{$user->dataingresso}}<br>
-    </body>
-</html>
+@endsection

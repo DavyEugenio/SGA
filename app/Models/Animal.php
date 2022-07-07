@@ -10,7 +10,7 @@ class Animal extends Model
     protected $fillable = ['especie', 'raca', 'nome', 'statusadocao', 'estadosaude', 'necessidadeespecial', 'datanascimento', 'datarecebimento'];
     
     public function Adocoes() {
-        return $this->belongsToMany('App\Adocao');
+        return $this->hasMany('App\Models\Adocao', 'animal_id', 'id');
     }
     
     public function Adotar($status) {

@@ -1,9 +1,6 @@
-<!doctype html>
-<html>
-    <head>
-        <title>title</title>
-    </head>
-    <body>
+@extends('../layouts.app')
+
+@section('content')
         <form method="POST" action="{{route('funcionario.adocao.store')}}">
             @csrf
             <label for="tutor_id">Tutor:</label>
@@ -26,5 +23,4 @@
             <br>
             <input type="submit" value="Enviar">
         </form>
-    </body>
-</html>
+@endsection
