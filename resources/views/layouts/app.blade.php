@@ -19,6 +19,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css\bootstrap.min.css') }}" rel="stylesheet">
+    <style>
+        table {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>

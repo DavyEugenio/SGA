@@ -2,6 +2,7 @@
 
 @section('content')
 <h2>Funcionários</h2>
+<a href="{{route('funcionario.user.createf')}}">Criar Funcionário</a>
 <table class="table">
     <thead>
         <tr>
@@ -25,7 +26,6 @@
         <td>{{$func->dataingresso}}</td>
         <td>{{$func->funcao}}</td>
         <td class="d-flex">
-
             <a class="btn btn-primary mx-1" href="{{route('funcionario.user.show', ['id' => $func->id])}}">Ver</a>
             <a class="btn btn-primary mx-1" href="{{route('funcionario.user.edit', ['id' => $func->id])}}">Alterar</a>
             <a class="btn btn-primary mx-1" href="{{route('funcionario.user.remove', ['id' => $func->id])}}">Excluir</a>
@@ -35,6 +35,7 @@
     @endforeach
 </table>
 <h2>Tutores</h2>
+<a href="{{route('funcionario.user.createt')}}">Criar Tutor</a>
 <table class="table">
     <thead>
         <tr>

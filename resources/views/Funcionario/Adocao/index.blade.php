@@ -2,6 +2,7 @@
 
 @section('content')
 <h2>Adoções</h2>
+<a href="{{route('funcionario.adocao.create')}}">Criar Adoções</a>
 <table class="table">
     <thead>
         <tr>

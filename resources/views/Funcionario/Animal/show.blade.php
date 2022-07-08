@@ -17,7 +17,7 @@ Operações:
     <a href="{{route('funcionario.animal.edit', ['id' => $animal->id])}}">Alterar</a>,
     <a href="{{route('funcionario.animal.remove', ['id' => $animal->id])}}">Excluir</a>,
 </li>
-@if($animal->adocoes != null)
+@if(count($animal->adocoes))
 <h2>Adoções</h2>
 <table class="table">
     <thead>

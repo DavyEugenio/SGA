@@ -9,7 +9,7 @@
                 <form method="POST" action="{{route('tutor.store')}}">
                     @csrf
                     <label class="col-md-4 col-form-label text-md-right" for="nome">Nome:</label>
-                    <input type="text"  name="nome" id="nome" required>
+                    <input class="form-control" type="text"  name="nome" id="nome" required>
                     <br>
                     <label class="col-md-4 col-form-label text-md-right" for="cpf">CPF:</label>
                     <input class="form-control" type="text"  name="cpf" id="cpf" required>

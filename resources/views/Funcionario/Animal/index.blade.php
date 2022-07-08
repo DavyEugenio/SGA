@@ -2,6 +2,7 @@
 
 @section('content')
 <h2>Animais</h2>
+<a href="{{route('funcionario.animal.create')}}">Criar Animal</a>
 <table class="table">
     <thead>
         <tr>
